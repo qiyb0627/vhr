@@ -1,0 +1,36 @@
+server:
+  port: 8081
+#数据库配置
+spring:
+  datasource:
+    driver-class-name: com.alibaba.druid.proxy.DruidDriver
+    url: mysql://127.0.0.1:3306/vhr?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+#redis配置
+#  redis:
+#    database: 0
+#    port: 6379
+#    host:
+#    password:
+#    jedis:
+#      pool:
+#      max-active: 8
+#      max-idle: 8
+#      max-wait: -1ms
+#      min-idle: 0
+#缓存配置
+  cache:
+    cache-names: menus_cache
+    redis:
+      time-to-live: 1800s
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 546162655@qq.com
+    password: mrzqqhceivzvbbcc
+    default-encoding: utf-8
+
+
+mybatis:
+  config-location: /mybatis-config.xml
